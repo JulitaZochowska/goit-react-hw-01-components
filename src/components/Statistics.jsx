@@ -4,7 +4,7 @@ import css from './Statistics.module.css';
 const Stat = props => {
   const { label, percentage } = props.stat;
   return (
-    <li className="item">
+    <li className={css.item}>
       <span className={css.label}>{label}</span>
       <span className={css.percentage}>{percentage}%</span>
     </li>

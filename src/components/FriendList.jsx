@@ -12,14 +12,14 @@ const FriendListItem = props => {
   );
 };
 
-// FriendListItem.propTypes = {
-//   // do obiektu zawsze shape
-//   friendListItem: PropTypes.shape({
-//     avatar: PropTypes.string,
-//     name: PropTypes.string,
-//     isOnline: PropTypes.string,
-//   }),
-// };
+FriendListItem.propTypes = {
+  // do obiektu zawsze shape
+  friendListItem: PropTypes.shape({
+    avatar: PropTypes.string,
+    name: PropTypes.string,
+    isOnline: PropTypes.string,
+  }),
+};
 
 export const FriendList = props => {
   const { friends } = props;
