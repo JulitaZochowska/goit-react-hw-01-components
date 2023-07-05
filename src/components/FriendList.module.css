@@ -1,0 +1,25 @@
+.friendList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  list-style: disc;
+  gap: 30px;
+  justify-content: flex-start;
+  margin-right: 200px;
+  border: 1px solid white;
+  box-shadow: 0 0 5px gray, 0 0 1px lightgray, 0 0 1px gray, 0 0 15px gray;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+}
+
+.name {
+  font-weight: 700;
+}

@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
+import css from './Profile.module.css';
 
 const Username = props => {
   const { username } = props;
-  return <p className="name">{username}</p>;
+  return <p className={css.name}>{username}</p>;
 };
 
 Username.propTypes = {
@@ -11,7 +12,7 @@ Username.propTypes = {
 
 const Tag = props => {
   const { tag } = props;
-  return <p className="tag">{tag}</p>;
+  return <p className={css.tag}>@{tag}</p>;
 };
 
 Tag.propTypes = {
@@ -20,7 +21,7 @@ Tag.propTypes = {
 
 const Location = props => {
   const { location } = props;
-  return <p className="location">{location}</p>;
+  return <p className={css.location}>{location}</p>;
 };
 
 Location.propTypes = {
@@ -29,7 +30,7 @@ Location.propTypes = {
 
 const Avatar = props => {
   const { avatar } = props;
-  return <img className="avatar" src={avatar} alt="User avatar" />;
+  return <img className={css.avatar} src={avatar} alt="User avatar" />;
 };
 
 Avatar.propTypes = {
@@ -39,18 +40,18 @@ Avatar.propTypes = {
 const Stats = props => {
   const { followers, views, likes } = props.stats;
   return (
-    <ul className="stats">
+    <ul className={css.stats}>
       <li>
-        <span className="label">Followers</span>
-        <span className="quantity">{followers}</span>
+        <span className={css.label}>Followers</span>
+        <span className={css.quantity}>{followers}</span>
       </li>
       <li>
-        <span className="label">Views</span>
-        <span className="quantity">{views}</span>
+        <span className={css.label}>Views</span>
+        <span className={css.quantity}>{views}</span>
       </li>
       <li>
-        <span className="label">Likes</span>
-        <span className="quantity">{likes}</span>
+        <span className={css.label}>Likes</span>
+        <span className={css.quantity}>{likes}</span>
       </li>
     </ul>
   );
@@ -67,8 +68,8 @@ Stats.propTypes = {
 export const Profile = props => {
   const { username, tag, location, avatar, stats } = props;
   return (
-    <div className="profile">
-      <div className="description">
+    <div className={css.profile}>
+      <div className={css.description}>
         <Avatar avatar={avatar} />
         <Username username={username} />
         <Tag tag={tag} />

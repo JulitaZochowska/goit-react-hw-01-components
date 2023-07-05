@@ -1,0 +1,87 @@
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: grey;
+}
+
+.name {
+  font-size: 40px;
+  font-weight: 700;
+  /* dzięki temu imię i nazwisko będzie w jednym wierszu  */
+  white-space: nowrap;
+}
+
+.name,
+.stats {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.tag,
+.location {
+  font-size: 30px;
+  font-weight: 600;
+  color: grey;
+  white-space: nowrap;
+}
+
+.stats > li,
+.profile,
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tag {
+  margin-bottom: 1px;
+  margin-top: 5px;
+}
+.label {
+  color: grey;
+}
+
+.quantity {
+  color: black;
+}
+
+.label,
+.quantity {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.stats {
+  list-style: none;
+  background-color: rgba(243, 246, 249, 255);
+  padding: 0;
+  width: 600px;
+  margin: 0;
+}
+
+.stats > li {
+  gap: 10px;
+  width: 100%;
+  border: 1px solid rgba(216, 224, 234, 255);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.profile {
+  padding: 300px;
+  background-color: rgba(231, 236, 242, 255);
+  height: 500px;
+  width: 300px;
+}
+
+.description {
+  padding: 200px;
+  border: 1px solid rgba(216, 224, 234, 255);
+  border-radius: 2% 2% 0% 0%;
+  background-color: white;
+  height: 300px;
+  width: 200px;
+}

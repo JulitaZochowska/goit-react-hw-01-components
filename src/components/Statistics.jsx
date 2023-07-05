@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
+import css from './Statistics.module.css';
 
 const Stat = props => {
   const { label, percentage } = props.stat;
   return (
     <li className="item">
-      <span className="label">{label}</span>
-      <span className="percentage">{percentage}%</span>
+      <span className={css.label}>{label}</span>
+      <span className={css.percentage}>{percentage}%</span>
     </li>
   );
 };
@@ -21,9 +22,9 @@ Stat.propTypes = {
 export const Statistics = props => {
   const { title, stats } = props;
   return (
-    <section className="statistics">
-      <h2 className="title">{title}</h2>
-      <ul className="stat-list">
+    <section className={css.statistics}>
+      <h2 className={css.title}>{title}</h2>
+      <ul className={css.statList}>
         {/* mapem otrzymuje dostęp do kadego pojedynczego obiektu tablicy (mozesz uyć pętli for of jako zamiennik) */}
         {stats.map(stat => (
           <Stat stat={stat} key={stat.id} />
