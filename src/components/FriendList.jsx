@@ -1,11 +1,24 @@
 import PropTypes from 'prop-types';
 import css from './FriendList.module.css';
 
+const getBgColor = variant => {
+  const colors = {
+    isOnline: 'green',
+    default: 'red',
+  };
+  if (variant) {
+    return colors.isOnline;
+  } else {
+    return colors.default;
+  }
+};
+
 const FriendListItem = props => {
   const { avatar, name, isOnline } = props;
   return (
     <li className={css.item}>
-      <span className={css.status}>{isOnline}</span>
+      {/* <span className={css.status}>{isOnline}</span> */}
+      <span style={{ color: getBgColor(isOnline) }}>•</span>
       <img className={css.avatar} src={avatar} alt="User avatar" width="48" />
       <p className={css.name}>{name}</p>
     </li>
